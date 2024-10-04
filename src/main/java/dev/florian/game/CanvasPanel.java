@@ -34,11 +34,11 @@ public class CanvasPanel extends JPanel {
         }
     }
 
-    private void generateVector(Graphics2D g, double cell_width, double cell_height) {
-        Vector p1 = new Vector(0.5, 0.5);
+    private void generateVector(Graphics2D g, double x, double y, double cell_width, double cell_height) {
+        Vector p1 = new Vector(x, y);
         g.setColor(Color.CYAN);
         Ellipse2D.Double circle = new Ellipse2D.Double(p1.getX()*cell_width, p1.getY()*cell_height, 0.2*cell_height, 0.2*cell_height);
-        g.draw(circle);
+        g.fill(circle);
     }
 
     public void paintComponent(Graphics graph) {
@@ -50,6 +50,8 @@ public class CanvasPanel extends JPanel {
         double cell_height = getHeight() / GRID_ROWS;
 
         displayGrid(g, cell_width, cell_height);
-        generateVector(g, cell_width, cell_height);
+        generateVector(g, 0.5, 0.5, cell_width, cell_height);
+        generateVector(g, 2, 2.25, cell_width, cell_height);
+
     }
 }
