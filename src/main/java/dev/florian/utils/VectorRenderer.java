@@ -1,5 +1,6 @@
 package dev.florian.utils;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
@@ -23,6 +24,7 @@ public class VectorRenderer {
 
     public void connectVector(Graphics2D g, Vector p1, Vector p2) {
         g.setColor(Color.CYAN);
+        g.setStroke(new BasicStroke(0.02f));
         Line2D.Double line = new Line2D.Double(p1.getX(), p1.getY(), p2.getX(), p2.getY());
         g.draw(line);
     }
