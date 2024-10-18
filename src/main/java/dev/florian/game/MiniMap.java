@@ -5,11 +5,11 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
 
-public class Grid {
+public class MiniMap {
     private int cols, rows;
     private double cellWidth, cellHeight;
 
-    public Grid(int cols, int rows) {
+    public MiniMap(int cols, int rows) {
         this.cols = cols;
         this.rows = rows;
     }

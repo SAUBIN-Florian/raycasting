@@ -10,7 +10,7 @@ public class Main {
     final int GAME_WIDTH = 800;
     final int GAME_HEIGHT = 800;
 
-    void run() {
+    private void run() {
         JFrame window = new JFrame("Raycasting Game");
         window.setSize(GAME_WIDTH, GAME_HEIGHT);
         window.setLocationRelativeTo(null);
