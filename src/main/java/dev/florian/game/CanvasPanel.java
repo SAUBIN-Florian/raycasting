@@ -41,12 +41,7 @@ public class CanvasPanel extends JPanel implements RepaintListener {
         this.minimap.drawGrid(g, width, height);
 
         Vector player = new Vector(300, 400);
-        Vector p3 = vectorRenderer.getDirection(player, cursor);
-        vectorRenderer.drawVector(g, player);
-        vectorRenderer.drawVector(g, cursor);
-        vectorRenderer.drawVector(g, p3);
-        vectorRenderer.connectVector(g, player, cursor);
-        vectorRenderer.connectVector(g, cursor, p3);
+        vectorRenderer.drawEachPoints(g, player, cursor, width / GRID_ROWS);
     }
 
     @Override
