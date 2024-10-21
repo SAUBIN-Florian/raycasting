@@ -44,6 +44,7 @@ public class CanvasPanel extends JPanel implements RepaintListener {
         vectorRenderer.drawVector(g, p1);
         vectorRenderer.drawVector(g, cursor);
         vectorRenderer.connectVector(g, p1, cursor);
+        vectorRenderer.drawSnappedLine(g, p1, cursor, width, height, GRID_COLS, GRID_ROWS);
     }
 
     @Override
