@@ -30,11 +30,32 @@ public class Vector {
         return pos;
     }
 
-    public Vector divide(Vector that) {
-        return new Vector(this.x/that.x, this.y/that.y);
+    public double length() {
+        return Math.sqrt(this.getX()*this.getX() + this.getY()*this.getY());
     }
 
+    public Vector norm() {
+        double l = length();
+        return new Vector(this.getX() / l, this.getY() / l);
+    }
+
+    public Vector scale(double scalar) {
+        return new Vector(this.getX() * scalar, this.getY() * scalar);
+    }
+
+    public Vector add(Vector that) {
+        return new Vector(this.getX()+that.getX(), this.getY()+that.getY());
+    }
+
+    public Vector sub(Vector that) {
+        return new Vector(this.getX() - that.getX(), this.getY() - that.getY());
+    }
+    
     public Vector multiply(Vector that) {
-        return new Vector(this.x*that.x, this.y*that.y);
+        return new Vector(this.getX()*that.getX(), this.getY()*that.getY());
+    }
+
+    public Vector divide(Vector that) {
+        return new Vector(this.getX()/that.getX(), this.getY()/that.getY());
     }
 }

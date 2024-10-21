@@ -19,7 +19,6 @@ public class MouseMotion implements MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        System.out.println(String.format("x: %d - y: %d", e.getX(), e.getY()));
         this.cursor.setX(e.getX());
         this.cursor.setY(e.getY());
 
